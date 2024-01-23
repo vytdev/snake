@@ -1,0 +1,97 @@
+/* contains styles */
+
+@charset "utf-8";
+
+*, ::before, ::after {
+	box-sizing: border-box;
+	user-select: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#table {
+	background-color: #444;
+	width: 100vw;
+	height: 60vh;
+	display: flex;
+}
+
+#table > div {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	max-height: 100%;
+	flex-shrink: 0;
+	flex: 1;
+}
+
+#table > div > div {
+	width: auto;
+	max-width: 100%;
+	flex-shrink: 0;
+	flex: 1;
+}
+
+#table > div > div.food {
+	background-color: #f00;
+}
+
+#table > div > div.snake {
+	background-color: #007734;
+}
+
+#table > div > div.head {
+	background-color: #00f66b;
+}
+
+#table > div > div.wall {
+	background-color: #ff8844;
+}
+
+#table > div > div.portal {
+	background-color: #0400b6;
+}
+
+#buttons {
+	background-color: #444;
+	width: 100vw;
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#buttons > div {
+	display: flex;
+	height: auto;
+	max-height: 100%;
+	flex-shrink: 0;
+	flex: 1;
+}
+
+#buttons > div > div {
+	width: auto;
+	max-width: 100%;
+	flex-shrink: 0;
+	flex: 1;
+	text-align: center;
+	border: 1px solid #888;
+}
+
+#buttons > div > div:not(.not-clickable) {
+	background: linear-gradient(to bottom, #0048be, #2c7cff);
+}
+
+#buttons > div > div:not(.not-clickable):active {
+	background: linear-gradient(to bottom, #505050, #b2b2b2);
+}
+
+#buttons > div > div.not-clickable {
+	background-color: #666;
+}
+
+#length, #current-speed {
+	color: #ff0;
+}
